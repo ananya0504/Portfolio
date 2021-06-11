@@ -155,11 +155,15 @@
   }
   .services .content .servicesBx img {
     max-width: 80px;
-    filter: infert(1);
+    padding-bottom: 10px;
   }
   .services .content .servicesBx h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+  }
+  .services .content .servicesBx p {
+    font-size: 15px;
+    
   }
   .work .content {
     display: flex;
