@@ -116,6 +116,11 @@
     font-size: 24px;
     margin-bottom: 10px;
   }
+
+  .contentBx p {
+    font-size: 14px;
+  }
+
   .w50 {
     min-width: 20%;
   }
