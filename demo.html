@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400&display=swap");
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+}
+ html {
+	 scroll-behavior: smooth;
+}
+ body {
+	 min-width: 320px;
+	 color: #6c757d;
+	 font-family: "Saira Extra Condensed", sans-serif;
+}
+ body span.highlight {
+	 color: #54a0ff;
+}
+ h1, h2, h3, h4, h5, h6 {
+	 color: #343a40;
+	 font-family: "Saira Extra Condensed", sans-serif;
+}
+ header {
+	 width: 100%;
+	 padding: 1rem;
+	 background-color: #54a0ff;
+	 position: sticky;
+	 top: 0;
+	 left: 0;
+	 z-index: 99;
+}
+ header nav .portrait {
+	 text-align: center;
+	 display: none;
+}
+ header nav .portrait img {
+	 width: 100%;
+	 max-width: 160px;
+	 border-radius: 100%;
+	 border: 6px solid rgba(255, 255, 255, 0.3);
+}
+ header nav ul {
+	 display: flex;
+	 justify-content: flex-end;
+	 list-style: none;
+}
+ header nav ul li {
+	 margin-left: 1rem;
+}
+ header nav ul li a {
+	 color: white;
+	 font-size: 1.2rem;
+	 font-family: "Saira Extra Condensed", sans-serif;
+	 font-weight: bold;
+	 text-decoration: none;
+	 opacity: 0.5;
+	 letter-spacing: 1.5px;
+}
+ header nav ul li a:hover {
+	 opacity: 0.9;
+}
+ main {
+	 width: 100%;
+}
+ main section {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 width: 100%;
+	 min-height: 100vh;
+	 padding: 0 1rem;
+	 border-bottom: 1px solid #f3f4f5;
+	 padding-top: 5rem;
+}
+ main section .section-heading {
+	 font-size: 4rem;
+	 color: #343a40;
+	 text-transform: uppercase;
+	 margin-bottom: 3rem;
+}
+ main section#welcome-section h1 div:first-child {
+	 font-size: 2.5rem;
+	 font-weight: 500;
+	 line-height: 0.5;
+}
+ main section#welcome-section h1 div:last-child {
+	 color: #343a40;
+	 font-size: 5.5rem;
+}
+ main section#welcome-section .info {
+	 font-weight: 600;
+	 font-size: 1.3rem;
+	 text-transform: uppercase;
+}
+ main section#welcome-section p {
+	 font-size: 1.3rem;
+	 margin: 2rem 0 1rem 0;
+}
+ main section#welcome-section .contacts a {
+	 width: 3rem;
+	 height: 3rem;
+	 display: inline-flex;
+	 justify-content: center;
+	 align-items: center;
+	 color: white;
+	 background-color: #343a40;
+	 font-size: 1.5rem;
+	 text-decoration: none;
+	 border-radius: 100%;
+	 margin-right: 0.5rem;
+}
+ main section#welcome-section .contacts a:hover {
+	 color: #54a0ff;
+}
+ main section#experience {
+	 padding-top: 5rem;
+}
+ main section#experience .experience {
+	 margin-bottom: 2.5rem;
+}
+ main section#experience .experience h2 {
+	 font-size: 2rem;
+	 text-transform: uppercase;
+}
+ main section#experience .experience h3 {
+	 font-size: 1.5rem;
+	 color: #6c757d;
+	 text-transform: uppercase;
+}
+ main section#experience .experience div {
+	 color: #54a0ff;
+	 font-size: 1.2rem;
+	 font-weight: 600;
+	 margin-bottom: 1rem;
+}
+ main section#experience .experience p {
+	 font-size: 1.3rem;
+}
+ main section#skills {
+	 padding-top: 5rem;
+}
+ main section#skills h2 {
+	 font-size: 2rem;
+	 color: #6c757d;
+	 text-transform: uppercase;
+}
+ main section#skills .icons {
+	 margin: 0.5rem 0 2rem 0;
+}
+ main section#skills .icons i {
+	 cursor: pointer;
+	 margin-right: 1rem;
+	 font-size: 3rem;
+}
+ main section#skills .icons i.fa-html5:hover {
+	 color: #e9633c;
+}
+ main section#skills .icons i.fa-css3-alt:hover {
+	 color: #2862e9;
+}
+ main section#skills .icons i.fa-js:hover {
+	 color: #f1d43b;
+}
+ main section#skills .icons i.fa-react:hover {
+	 color: #49b7e8;
+}
+ main section#skills .icons i.fa-bootstrap:hover {
+	 color: #533b78;
+}
+ main section#skills .icons i.fa-sass:hover {
+	 color: #c85e93;
+}
+ main section#skills ul {
+	 list-style: square;
+}
+ main section#skills ul li {
+	 font-size: 1.3rem;
+	 margin-left: 2rem;
+}
+ main section#projects {
+	 padding-top: 5rem;
+}
+ main section#projects .project-container {
+	 width: 100%;
+	 display: grid;
+	 grid-template-columns: 1fr;
+	 grid-column-gap: 0.5rem;
+}
+ main section#projects .project-container .project-tile a img {
+	 width: 100%;
+	 height: auto;
+	 filter: grayscale(100%);
+}
+ main section#projects .project-container .project-tile a img:hover {
+	 filter: grayscale(0);
+}
+ @media screen and (min-width: 480px) {
+	 main section#projects .project-container {
+		 grid-template-columns: repeat(2, 1fr);
+	}
+}
+ @media screen and (min-width: 568px) {
+	 main section#experience .experience {
+		 display: grid;
+		 grid-template-columns: auto auto;
+	}
+	 main section#experience .experience h2 {
+		 grid-column: 1 / span 2;
+		 grid-row: 1 / span 1;
+		 line-height: 1;
+	}
+	 main section#experience .experience h3 {
+		 grid-column: 1 / span 2;
+		 margin-bottom: 0.5rem;
+	}
+	 main section#experience .experience div {
+		 grid-column: 2 / span 1;
+		 grid-row: 1 / span 1;
+	}
+	 main section#experience .experience p {
+		 grid-column: 1 / span 2;
+	}
+}
+ @media screen and (min-width: 720px) {
+	 main section#projects .project-container {
+		 grid-template-columns: repeat(3, 1fr);
+	}
+}
+ @media screen and (min-width: 1024px) {
+	 body {
+		 display: grid;
+		 grid-template-columns: auto auto;
+	}
+	 header {
+		 height: 100%;
+		 max-height: 100vh;
+	}
+	 header nav {
+		 width: 15vw;
+		 max-width: 300px;
+		 height: 100%;
+		 display: flex;
+		 flex-direction: column;
+		 justify-content: center;
+	}
+	 header nav .portrait {
+		 display: block;
+	}
+	 header nav ul {
+		 flex-direction: column;
+		 align-items: center;
+		 justify-content: center;
+	}
+	 header nav ul li {
+		 margin: 0.6rem 0;
+	}
+	 header nav ul li a {
+		 font-size: 1.5rem;
+	}
+	 main section {
+		 padding: 0 3rem;
+	}
+	 main section#experience .experience {
+		 display: grid;
+		 grid-template-columns: auto auto;
+	}
+	 main section#experience .experience h2 {
+		 grid-column: 1 / span 2;
+		 grid-row: 1 / span 1;
+		 line-height: 1;
+	}
+	 main section#experience .experience h3 {
+		 grid-column: 1 / span 2;
+		 margin-bottom: 0.5rem;
+	}
+	 main section#experience .experience div {
+		 grid-column: 2 / span 1;
+		 grid-row: 1 / span 1;
+	}
+}
+ @media screen and (min-width: 1240px) {
+	 main section#projects .project-container {
+		 grid-template-columns: repeat(4, 1fr);
+	}
+}
+ 
+</style>
+<body>
+    <header>
+        <nav id="navbar">
+          <div class="portrait">
+            <img src="D:\web dev\DSC 30DAYSOFWEBDEV\HTML Day 2-5\Project 1\Ananya.jpeg" alt="dat_portrait" />
+          </div>
+          <ul>
+            <li><a href="#welcome-section">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+    </header>
+      <main>
+        <section id="welcome-section">
+          <h1>
+            <div>Hi there! I am</div>
+            <div>Ananya <span class="highlight">Gupta</span></div>
+          </h1>
+          <div class="info">
+            Ho Chi Minh City · Vietnam · (+84) 037 955 7887 ·
+            <span class="highlight">quocdat1994@gmail.com</span>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
+            aliquam, explicabo iusto iste vero adipisci fuga fugit illum. Corporis
+            officia corrupti dolorum nemo nihil quia fugit exercitationem modi
+            aperiam facilis.
+          </p>
+          <div class="contacts">
+            <a href="https://codepen.io/quocdat1994" target="_blank">
+              <i class="fab fa-codepen"></i>
+            </a>
+            <a id="profile-link" href="https://github.com/QuocDat1994" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dattruongnq" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="skype:live:quocdat1994_3?chat">
+              <i class="fab fa-skype"></i>
+            </a>
+          </div>
+        </section>
+        <section id="experience">
+          <h1 class="section-heading">Experience</h1>
+          <div class="experience">
+            <h2>Frontend Developer</h2>
+            <h3>Metanet</h3>
+            <div>Oct 2019 - Present</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              tempore debitis vitae, dolor non quis fugit voluptatum odit facilis
+              officia sapiente dignissimos dolores omnis minus, excepturi quaerat
+              quam eius vel.
+            </p>
+          </div>
+          <div class="experience">
+            <h2>Web Developer</h2>
+            <h3>NHN Vietnam</h3>
+            <div>Jul 2018 - Sep 2019</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              tempore debitis vitae, dolor non quis fugit voluptatum odit facilis
+              officia sapiente dignissimos dolores omnis minus, excepturi quaerat
+              quam eius vel. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Aspernatur molestiae dignissimos error molestias accusamus
+              consequatur.
+            </p>
+          </div>
+          <div class="experience">
+            <h2>Software Developer</h2>
+            <h3>Persol Process & Technology</h3>
+            <div>Oct 2015 - Oct 2017</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              tempore debitis vitae, dolor non quis fugit voluptatum odit facilis
+              officia sapiente dignissimos dolores omnis minus, excepturi quaerat
+              quam eius vel.
+            </p>
+          </div>
+        </section>
+        <section id="skills">
+          <h1 class="section-heading">Skills</h1>
+          <h2>Programming Languages</h2>
+          <div class="icons">
+            <i class="fab fa-html5" title="HTML"></i>
+            <i class="fab fa-css3-alt" title="CSS"></i>
+            <i class="fab fa-js" title="Javascript"></i>
+            <i class="fab fa-react" title="React"></i>
+            <i class="fab fa-bootstrap" title="Bootstrap"></i>
+            <i class="fab fa-sass" title="Sass"></i>
+          </div>
+          <h2>Soft Skills</h2>
+          <ul>
+            <li>English</li>
+            <li>Agile</li>
+            <li>Teamwork</li>
+            <li>Communication</li>
+            <li>Time Management</li>
+            <li>Presentation</li>
+          </ul>
+        </section>
+        <section id="projects">
+          <h1 class="section-heading">Projects</h1>
+          <div class="project-container">
+            <div class="project-tile">
+              <a href="#">
+                <img src="https://i.ibb.co/vHJZWzL/project1.jpg" alt="project_1" title="Project 1" />
+              </a>
+            </div>
+            <div class="project-tile">
+              <a href="#">
+                <img src="https://i.ibb.co/2q1TNZj/project2.jpg" alt="project_2" title="Project 2" />
+              </a>
+            </div>
+            <div class="project-tile">
+              <a href="#">
+                <img src="https://i.ibb.co/jbhJvGp/project3.jpg" alt="project_3" title="Project 3" />
+              </a>
+            </div>
+            <div class="project-tile">
+              <a href="#">
+                <img src="https://i.ibb.co/LQ9j1p3/project4.jpg" alt="project_4" title="Project 4" />
+              </a>
+            </div>
+            <div class="project-tile">
+              <a href="#">
+                <img src="https://i.ibb.co/Bz2XVf7/project5.jpg" alt="project_5" title="Project 5" />
+              </a>
+            </div>
+          </div>
+        </section>
+    </main>
+      <footer></footer>
+</body>
+</html>>
